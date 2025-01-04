@@ -45,7 +45,7 @@ VALIDATE $? "Installing NodeJS"
 id expense &>>$LOG_FILE_NAME
 if [ $? -ne 0 ]
 then
-    useradd aswini &>>$LOG_FILE_NAME
+    useradd expense &>>$LOG_FILE_NAME
     VALIDATE $? "Adding expense user"
 else
     echo -e "expense user already exists ... $Y SKIPPING $N"
@@ -73,7 +73,7 @@ cp /home/ec2-user/expense-shell/backend.service /etc/systemd/system/backend.serv
 dnf install mysql -y &>>$LOG_FILE_NAME
 VALIDATE $? "Installing MySQL Client"
 
-mysql -h mysql.manakitchen.in -uroot -pExpenseApp@1 < /app/schema/backend.sql &>>$LOG_FILE_NAME
+mysql -h mysql.daws82s.online -uroot -pExpenseApp@1 < /app/schema/backend.sql &>>$LOG_FILE_NAME
 VALIDATE $? "Setting up the transactions schema and tables"
 
 systemctl daemon-reload &>>$LOG_FILE_NAME

@@ -2,8 +2,8 @@
 Description = Backend Service
 
 [Service]
-User=aswini
-Environment=DB_HOST="mysql.manakitchen.in"
+User=expense
+Environment=DB_HOST="mysql.daws82s.online"
 ExecStart=/bin/node /app/index.js
 SyslogIdentifier=backend
 
