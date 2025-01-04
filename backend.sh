@@ -45,7 +45,7 @@ VALIDATE $? "Installing NodeJS"
 id expense &>>$LOG_FILE_NAME
 if [ $? -ne 0 ]
 then
-    useradd expense &>>$LOG_FILE_NAME
+    useradd aswini &>>$LOG_FILE_NAME
     VALIDATE $? "Adding expense user"
 else
     echo -e "expense user already exists ... $Y SKIPPING $N"

@@ -2,7 +2,7 @@
 Description = Backend Service
 
 [Service]
-User=expense
+User=aswini
 Environment=DB_HOST="mysql.manakitchen.in"
 ExecStart=/bin/node /app/index.js
 SyslogIdentifier=backend
